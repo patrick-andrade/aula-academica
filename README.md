@@ -1,0 +1,60 @@
+# aula-academica
+
+Skill para planejar e produzir aulas universitárias em Economia e Ciências Sociais Aplicadas a partir da bibliografia do curso.
+
+O aplicativo do agente lê esta ficha e segue o ritual: reconstruir o argumento da fonte, explicar o que o estudante precisa para acompanhar sem leitura prévia, apresentar um plano pedagógico e só então gerar os arquivos (slides, Quarto, PPTX).
+
+Funciona no [padrão aberto Agent Skills](https://agentskills.io/specification) (`SKILL.md`). Serve nos seus cursos e nos de colegas.
+
+Guia: [Skills na Prática](https://patrick-andrade.github.io/guias/skills-na-pratica.html).
+
+## O que ela faz
+
+- Localiza a aula no plano de ensino (público, duração, o que veio antes e o que vem depois).
+- Lê a fonte principal e monta a cadeia: problema, premissas, mecanismo, resultado, limites.
+- Propõe um plano pedagógico para você revisar.
+- Depois da aprovação, produz a apresentação no formato pedido e confere rigor, tempo e legibilidade.
+
+A skill guarda o *como*. O chat continua dizendo *qual* aula, *quais* arquivos e *quando* está pronto.
+
+## Instalar
+
+O caminho mais simples para quem está começando é o **Codex**, com a pasta do curso apontada. O mesmo arquivo vale no Claude Code e no Cursor.
+
+**Neste projeto** (recomendado para um curso):
+
+```bash
+npx skills add patrick-andrade/aula-academica
+```
+
+**Em todos os projetos desta máquina** (se você usa a skill em várias disciplinas):
+
+```bash
+npx skills add patrick-andrade/aula-academica --global
+```
+
+`npx` vem com o Node.js e baixa o instalador na hora. Sem isso, copie o `SKILL.md` deste repositório para:
+
+```text
+.agents/skills/aula-academica/SKILL.md
+```
+
+na raiz da pasta do curso. No Claude Code, o equivalente é `.claude/skills/aula-academica/`. No Cursor, `.agents/skills/` também costuma bastar.
+
+Abra um **chat novo** depois de instalar.
+
+## Pedir
+
+```text
+Use a skill aula-academica.
+
+Objetivo: plano pedagógico da aula de [data], a partir do capítulo
+indicado no plano de ensino.
+Aguarde minha aprovação antes de gerar os slides.
+```
+
+A skill trabalha em duas etapas: primeiro o plano; depois os arquivos, quando você aprovar.
+
+## Licença
+
+[MIT](LICENSE). Você pode usar, copiar e adaptar nos seus cursos; mantenha o aviso de copyright e da licença.
