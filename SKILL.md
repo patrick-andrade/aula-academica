@@ -1,10 +1,11 @@
 ---
 name: aula-academica
-description: Planejar, criar e revisar aulas universitárias rigorosas e autossuficientes em Economia e Ciências Sociais Aplicadas a partir de planos de ensino, capítulos, artigos, livros, PDFs e apresentações de referência. Usar quando o aplicativo do agente precisar transformar bibliografia acadêmica em plano pedagógico, slides e Quarto/PPTX para estudantes que podem não ter lido a fonte, preservando encadeamento argumentativo, hipóteses, modelos, contexto intelectual, fontes, duração e identidade visual fornecida.
+description: Planeja e produz aulas universitárias em Economia e Ciências Sociais Aplicadas a partir da bibliografia do curso. Usar somente quando o usuário nomear explicitamente a skill aula-academica.
 license: MIT
+disable-model-invocation: true
 metadata:
   author: Patrick Andrade
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Aula acadêmica

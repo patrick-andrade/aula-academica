@@ -1,0 +1,7 @@
+interface:
+  display_name: "Aula acadêmica"
+  short_description: "Planeja e produz aulas universitárias a partir da bibliografia"
+  default_prompt: "Use $aula-academica. Objetivo: plano pedagógico da aula de [data], a partir do capítulo indicado no plano de ensino. Aguarde minha aprovação antes de gerar os slides."
+
+policy:
+  allow_implicit_invocation: false

@@ -4,6 +4,8 @@ Skill para planejar e produzir aulas universitárias em Economia e Ciências Soc
 
 O aplicativo do agente lê esta ficha e segue o ritual: reconstruir o argumento da fonte, explicar o que o estudante precisa para acompanhar sem leitura prévia, apresentar um plano pedagógico e só então gerar os arquivos (slides, Quarto, PPTX).
 
+A skill **não** dispara por contexto. Ter um PDF, um plano de ensino ou slides abertos não basta: é preciso nomeá-la.
+
 Funciona no [padrão aberto Agent Skills](https://agentskills.io/specification) (`SKILL.md`). Serve nos seus cursos e nos de colegas.
 
 Guia: [Skills na Prática](https://patrick-andrade.github.io/guias/skills-na-pratica.html).
@@ -33,17 +35,44 @@ npx skills add patrick-andrade/aula-academica
 npx skills add patrick-andrade/aula-academica --global
 ```
 
-`npx` vem com o Node.js e baixa o instalador na hora. Sem isso, copie o `SKILL.md` deste repositório para:
+`npx` vem com o Node.js e baixa o instalador na hora. Sem isso, copie a pasta da skill para:
 
 ```text
-.agents/skills/aula-academica/SKILL.md
+.agents/skills/aula-academica/
+├── SKILL.md
+└── agents/
+    └── openai.yaml
 ```
 
-na raiz da pasta do curso. No Claude Code, o equivalente é `.claude/skills/aula-academica/`. No Cursor, `.agents/skills/` também costuma bastar.
+na raiz da pasta do curso. No Claude Code, o equivalente é `.claude/skills/aula-academica/`. No Cursor, `.agents/skills/` também costuma bastar. Inclua `agents/openai.yaml`; o `SKILL.md` sozinho não fecha a invocação implícita no Codex.
 
 Abra um **chat novo** depois de instalar.
 
 ## Pedir
+
+Nomeie a skill. Linguagem natural sobre a aula, sem o nome, não a ativa.
+
+**Cursor** e **Claude Code**:
+
+```text
+/aula-academica
+
+Objetivo: plano pedagógico da aula de [data], a partir do capítulo
+indicado no plano de ensino.
+Aguarde minha aprovação antes de gerar os slides.
+```
+
+**Codex**:
+
+```text
+Use $aula-academica.
+
+Objetivo: plano pedagógico da aula de [data], a partir do capítulo
+indicado no plano de ensino.
+Aguarde minha aprovação antes de gerar os slides.
+```
+
+Também vale pedir em linguagem natural, desde que o nome apareça:
 
 ```text
 Use a skill aula-academica.
