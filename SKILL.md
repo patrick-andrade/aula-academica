@@ -1,11 +1,11 @@
 ---
 name: aula-academica
-description: Planeja e produz aulas universitárias em Economia e Ciências Sociais Aplicadas a partir da bibliografia do curso. Usar somente quando o usuário nomear explicitamente a skill aula-academica.
+description: Planeja, produz e revisa aulas universitárias em Economia e Ciências Sociais Aplicadas a partir da bibliografia do curso. Usar somente quando o usuário nomear explicitamente a skill aula-academica.
 license: MIT
 disable-model-invocation: true
 metadata:
   author: Patrick Andrade
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Aula acadêmica
@@ -44,7 +44,7 @@ Após a aprovação:
 
 Se o pedido for apenas de planejamento, análise ou revisão, limitar-se à etapa correspondente e não inferir autorização para criar ou alterar arquivos.
 
-## Executar as seis fases
+## Executar as cinco fases
 
 ### 1. Localizar a aula no curso
 
@@ -123,10 +123,12 @@ Organizar, como padrão adaptável:
 6. sínteses intermediárias;
 7. exemplos, diagramas ou exercícios analíticos;
 8. aplicação integradora;
-9. síntese final e verificação de aprendizagem;
+9. síntese final e verificação de aprendizagem: pergunta curta e individual, respondível com o que foi exposto, com resposta esperada preparada;
 10. apêndice técnico e referências, quando necessário.
 
 Distribuir o tempo antes de redigir os slides. Incluir intervalos e atividades na soma. Ajustar a quantidade de slides à densidade do conteúdo, ao ritmo da exposição e ao sistema visual fornecido; não buscar um número arbitrário de lâminas.
+
+Registrar os tempos somente no plano pedagógico. Não exibir minutos, durações ou horários nas lâminas — agenda, títulos, rótulos de atividade — nem nas notas do apresentador, salvo pedido explícito do usuário.
 
 Se houver tempo para avançar além do trecho principal, seguir a sequência do plano de ensino e construir apenas uma ponte controlada. Não esvaziar aulas futuras antecipando seus argumentos em detalhe.
 
@@ -181,6 +183,21 @@ Fazer os exercícios decorrerem das condições e mecanismos já apresentados. I
 - questão integradora semelhante à avaliação esperada.
 
 Não introduzir na atividade um conceito indispensável que não tenha sido explicado antes.
+
+## Adotar as convenções de linguagem
+
+Redigir em português do Brasil todo o material voltado ao estudante. Nomear os momentos da aula com termos em português, não com anglicismos:
+
+| Evitar | Usar |
+|---|---|
+| exit ticket | verificação de aprendizagem |
+| warm-up | aquecimento ou pergunta inicial |
+| roadmap | roteiro da aula |
+| recap | retomada |
+| takeaways, wrap-up | síntese ou fechamento |
+| hands-on | atividade prática |
+
+Manter em inglês apenas o termo técnico consagrado na disciplina (por exemplo, *trade-off* ou *spillover*), em itálico e explicado na primeira ocorrência.
 
 ## Elaborar o plano pedagógico para aprovação
 
@@ -245,7 +262,9 @@ Não considerar a aula concluída sem responder afirmativamente às perguntas ap
 ### Tempo e artefato
 
 - A soma dos tempos, incluindo intervalo e atividades, corresponde à duração solicitada?
+- As lâminas e as notas do apresentador estão livres de minutos e durações?
 - O volume de conteúdo é compatível com o ritmo de uma aula real?
+- Os termos voltados ao estudante estão em português, sem anglicismos desnecessários?
 - Todas as lâminas substantivas têm fontes?
 - O arquivo final foi renderizado e inspecionado integralmente?
 - Não há cortes, sobreposições, fontes indevidas, elementos fora da área ou fallback de layout?

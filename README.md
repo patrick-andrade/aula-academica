@@ -16,6 +16,9 @@ Guia: [Skills na Prática](https://patrick-andrade.github.io/guias/skills-na-pra
 - Lê a fonte principal e monta a cadeia: problema, premissas, mecanismo, resultado, limites.
 - Propõe um plano pedagógico para você revisar.
 - Depois da aprovação, produz a apresentação no formato pedido e confere rigor, tempo e legibilidade.
+- Revisa uma aula existente comparando plano de ensino, fonte e slides.
+
+Nos slides, os termos ficam em português ("verificação de aprendizagem", não "exit ticket"), e a distribuição do tempo aparece só no plano pedagógico, nunca nas lâminas ou nas notas do apresentador.
 
 A skill guarda o *como*. O chat continua dizendo *qual* aula, *quais* arquivos e *quando* está pronto.
 
@@ -83,6 +86,16 @@ Aguarde minha aprovação antes de gerar os slides.
 ```
 
 A skill trabalha em duas etapas: primeiro o plano; depois os arquivos, quando você aprovar.
+
+## Atualizar
+
+Rode de novo o mesmo comando de instalação (com `--global`, se foi assim que instalou) e abra um chat novo:
+
+```bash
+npx skills add patrick-andrade/aula-academica
+```
+
+As mudanças de cada versão estão em [Releases](https://github.com/patrick-andrade/aula-academica/releases).
 
 ## Licença
 
