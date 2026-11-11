@@ -14,9 +14,13 @@ Guia: [Skills na Prática](https://patrick-andrade.github.io/guias/skills-na-pra
 
 - Localiza a aula no plano de ensino (público, duração, o que veio antes e o que vem depois).
 - Lê a fonte principal e monta a cadeia: problema, premissas, mecanismo, resultado, limites.
-- Propõe um plano pedagógico para você revisar.
-- Depois da aprovação, produz a apresentação no formato pedido e confere rigor, tempo e legibilidade.
+- Monta um inventário de conceitos: cada termo, modelo, autor e afirmação empírica com definição, origem e a lâmina em que é explicado.
+- Propõe um plano pedagógico para você revisar, com o que entra e o que é cortado.
+- Depois da aprovação, produz a apresentação no formato pedido. Cada lâmina abre conforme o seu tipo (a definição num conceito, a pergunta num modelo, o achado numa evidência), e a fonte aparece no slide: autor e ano no texto, linha de fonte em toda figura e tabela.
+- Audita como leitor frio: um revisor que só tem os slides renderizados, sem as notas, confere lâmina a lâmina se cada termo foi definido, se as hipóteses vêm antes do resultado e se a evidência traz estudo e magnitude.
 - Revisa uma aula existente comparando plano de ensino, fonte e slides.
+
+Ela decide o conteúdo e a ordem. A forma dos bullets fica com a convenção do seu deck ou com a skill [apresentacao-bullets](https://github.com/patrick-andrade/apresentacao-bullets).
 
 Nos slides, os termos ficam em português ("verificação de aprendizagem", não "exit ticket"), e a distribuição do tempo aparece só no plano pedagógico, nunca nas lâminas ou nas notas do apresentador.
 
@@ -43,11 +47,15 @@ npx skills add patrick-andrade/aula-academica --global
 ```text
 .agents/skills/aula-academica/
 ├── SKILL.md
-└── agents/
-    └── openai.yaml
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── auditoria.md
+    ├── contrato-da-lamina.md
+    └── fontes-e-evidencia.md
 ```
 
-na raiz da pasta do curso. No Claude Code, o equivalente é `.claude/skills/aula-academica/`. No Cursor, `.agents/skills/` também costuma bastar. Inclua `agents/openai.yaml`; o `SKILL.md` sozinho não fecha a invocação implícita no Codex.
+na raiz da pasta do curso. No Claude Code, o equivalente é `.claude/skills/aula-academica/`. No Cursor, `.agents/skills/` também costuma bastar. Inclua `references/` e `agents/openai.yaml`: o `SKILL.md` sozinho não carrega o contrato da lâmina, as regras de fonte e o protocolo de auditoria, nem fecha a invocação implícita no Codex.
 
 Abra um **chat novo** depois de instalar.
 
